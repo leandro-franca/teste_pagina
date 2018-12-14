@@ -21,15 +21,16 @@
 
 </body>
 <script>
- if ('serviceWorker' in navigator) {
-         console.log('CLIENT: service worker registration in progress.');
-         navigator.serviceWorker.register('/teste_pagina/offline.js', { scope: '/teste_pagina/' }).then(function (/*registration*/) {
-         }, function () {
-             console.log('CLIENT: service worker registration failure.');
-         });
-     } else {
-         console.log('CLIENT: service worker is not supported.');
-     }
+			
+ <!-- if ('serviceWorker' in navigator) { -->
+         <!-- console.log('CLIENT: service worker registration in progress.'); -->
+         <!-- navigator.serviceWorker.register('/teste_pagina/offline.js', { scope: '/teste_pagina/' }).then(function (/*registration*/) { -->
+         <!-- }, function () { -->
+             <!-- console.log('CLIENT: service worker registration failure.'); -->
+         <!-- }); -->
+     <!-- } else { -->
+         <!-- console.log('CLIENT: service worker is not supported.'); -->
+     <!-- } -->
 </script>
 
 </html>
