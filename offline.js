@@ -1,5 +1,6 @@
 	const filesToCache = [
-		'/'
+		'/teste_pagina',
+		'/teste_pagina/'
 	];
 
 	const staticCacheName = 'cache_calculadoras';	
