@@ -10,7 +10,7 @@
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="1000" />
-	<link rel="manifest" href="/manifest.json">
+	<link rel="manifest" href="/teste_pagina/manifest.json">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 <script>
  if ('serviceWorker' in navigator) {
          console.log('CLIENT: service worker registration in progress.');
-         navigator.serviceWorker.register('/offline.js', { scope: '/' }).then(function (/*registration*/) {
+         navigator.serviceWorker.register('/teste_pagina/offline.js', { scope: '/' }).then(function (/*registration*/) {
          }, function () {
              console.log('CLIENT: service worker registration failure.');
          });
