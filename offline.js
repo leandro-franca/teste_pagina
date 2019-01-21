@@ -4,14 +4,6 @@
 	];
 
 	const staticCacheName = 'cache_calculadoras';	
-let deferredPrompt;
-
-self.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-});
 	
     self.addEventListener("install", function(event) {
 	  console.log('WORKER: install event in progress.');
