@@ -5,22 +5,13 @@
 
 	const staticCacheName = 'cache_calculadoras';	
 	
-	self.addEventListener('beforeinstallprompt', function(e) {
-  // beforeinstallprompt Event fired
-
-  // e.userChoice will return a Promise.
-  // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
-  e.userChoice.then(function(choiceResult) {
-
-    console.log(choiceResult.outcome);
-
-    if(choiceResult.outcome == 'dismissed') {
-      console.log('User cancelled home screen install');
-    }
-    else {
-      console.log('User added to home screen');
-    }
-  });
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can add to home screen
+  btnAdd.style.display = 'block';
 });
 	
     self.addEventListener("install", function(event) {
